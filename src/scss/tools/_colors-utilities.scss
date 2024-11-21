@@ -1,0 +1,31 @@
+@use "../abstract" as *;
+
+// Colors
+
+.bg-white {
+  background-color: hsl(var(--clr-space-100));
+}
+
+.bg-accent {
+  background-color: hsl(var(--clr-space-200));
+}
+
+.bg-dark {
+  background-color: hsl(var(--clr-space-300));
+}
+
+.text-white {
+  color: hsl(var(--clr-space-100));
+}
+
+.text-accent {
+  color: hsl(var(--clr-space-200));
+}
+
+.text-dark {
+  color: hsl(var(--clr-space-300));
+}
+
+.example-component {
+  background-color: hsl(var(--clr-space-100));
+}
