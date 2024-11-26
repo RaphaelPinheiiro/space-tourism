@@ -1,0 +1,44 @@
+@use "../abstract" as *;
+@use "../tools" as *;
+
+.l-main {
+  text-align: center;
+
+  &__introduction {
+    align-content: center;
+  }
+
+  &__destination {
+    display: grid;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__picture {
+    justify-self: center;
+    max-width: 60%;
+  }
+
+  &__title {
+    grid-column: 1 / -1;
+  }
+}
+
+@include breakPoints("small") {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .l-main__introduction,
+  .l-main__destination {
+    text-align: left;
+  }
+
+  .c-button {
+    justify-self: end;
+  }
+
+  .l-main__destination {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

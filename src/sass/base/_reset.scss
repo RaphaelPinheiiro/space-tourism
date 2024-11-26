@@ -1,0 +1,28 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+body,
+figure,
+picture {
+  margin: 0;
+}
+
+menu,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}

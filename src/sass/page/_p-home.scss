@@ -1,0 +1,19 @@
+@use "../tools" as *;
+
+.p-home {
+  background-image: url("/src/assets/home/background-home-mobile.jpg");
+  background-position: bottom;
+  background-size: cover;
+}
+
+@include breakPoints("medium") {
+  .p-home {
+    background-image: url("/src/assets/home/background-home-tablet.jpg");
+  }
+}
+
+@include breakPoints("large") {
+  .p-home {
+    background-image: url("/src/assets/home/background-home-desktop.jpg");
+  }
+}

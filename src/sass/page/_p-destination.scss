@@ -1,0 +1,19 @@
+@use "../tools" as *;
+
+.p-destination {
+  background-image: url("/src/assets/destination/background-destination-mobile.jpg");
+  background-position: top;
+  background-size: cover;
+}
+
+@include breakPoints("medium") {
+  .p-destination {
+    background-image: url("/src/assets/destination/background-destination-tablet.jpg");
+  }
+}
+
+@include breakPoints("large") {
+  .p-destination {
+    background-image: url("/src/assets/destination/background-destination-desktop.jpg");
+  }
+}

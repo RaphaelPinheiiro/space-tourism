@@ -1,0 +1,6 @@
+@use "../abstract" as *;
+
+body {
+  background-color: hsl(var(--clr-space-300));
+  min-height: 100vh;
+}

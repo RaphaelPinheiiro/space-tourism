@@ -1,0 +1,23 @@
+@use "../abstract" as *;
+@use "../tools" as *;
+
+:root {
+  @each $color, $shade in $colors {
+    @each $prop, $value in $shade {
+      --clr-#{$color}-#{$prop}: #{$value};
+    }
+  }
+  @each $screen-size, $property in $type-scale {
+    @if $screen-size == "small" {
+      @each $prop, $value in $property {
+        --fs-#{$prop}: #{$value};
+      }
+    } @else {
+      @include breakPoints("small") {
+        @each $prop, $value in $property {
+          --fs-#{$prop}: #{$value};
+        }
+      }
+    }
+  }
+}
