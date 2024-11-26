@@ -5,12 +5,8 @@
   grid-template-columns: repeat(2, 1fr);
 
   &__logo {
-    margin: 2em;
+    margin: 2rem;
   }
-}
-
-.c-nav {
-  display: none;
 }
 
 @include breakPoints("medium") {
@@ -18,7 +14,7 @@
     display: block;
   }
 
-  .c-openbutton {
+  .c-button {
     display: none;
   }
 }
