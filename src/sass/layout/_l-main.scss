@@ -10,25 +10,40 @@
 
   &__destination {
     display: grid;
-    text-align: center;
     align-items: center;
-    row-gap: 2rem;
+    text-align: center;
+    gap: 2rem;
     height: 100%;
   }
 
-  &__title {
-    grid-column: 1 / -1;
+  &__picture {
+    justify-self: center;
+    max-width: 60%;
   }
 
-  &__picture {
-    max-width: 60%;
-    justify-self: center;
+  &__info {
+    display: grid;
+    gap: 2em;
+    border-top: 1px solid hsl(var(--clr-space-100) / 0.25);
+    padding-top: 1.5rem;
   }
 }
 
-@include breakPoints("small") {
+@include breakPoints("medium") {
   .l-main__destination {
     grid-template-columns: repeat(2, 1fr);
     text-align: left;
+  }
+
+  .l-main__info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .l-main__tabs {
+    order: -1;
+  }
+
+  .l-main__title {
+    order: -1;
   }
 }

@@ -1,0 +1,10 @@
+@use "../abstract" as *;
+
+.c-tabs {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: hsl(var(--clr-space-200));
+  padding: 0;
+  margin: 1em;
+}
