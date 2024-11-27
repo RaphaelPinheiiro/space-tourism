@@ -2,9 +2,17 @@
 
 .c-tabs {
   cursor: pointer;
-  background-color: transparent;
   border: none;
+  background-color: transparent;
+  border-bottom: 3px solid transparent;
   color: hsl(var(--clr-space-200));
-  padding: 0;
+  padding: 1em 0;
   margin: 1em;
+  transition: $transition-global;
+
+  &:hover,
+  &:focus {
+    color: hsl(var(--clr-space-100));
+    border-bottom: 3px solid hsl(var(--clr-space-100));
+  }
 }

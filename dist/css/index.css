@@ -29,6 +29,7 @@ picture {
 
 button {
   font-family: inherit;
+  font-size: inherit;
 }
 
 body {
@@ -205,24 +206,80 @@ p {
   color: hsl(var(--clr-space-100));
 }
 
-.c-button {
+.c-openbutton {
+  cursor: pointer;
   background-color: transparent;
   border: none;
   color: hsl(var(--clr-space-100));
-  font-size: 2em;
+  font-size: 2rem;
   justify-self: end;
   align-self: center;
   padding: 0;
-  margin: 2rem 0;
+  transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.c-openbutton:hover, .c-openbutton:focus {
+  color: hsl(var(--clr-space-300));
+}
+
+.c-closebutton {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: hsl(var(--clr-space-100));
+  font-size: 4rem;
+  justify-self: center;
+  align-self: center;
+  padding: 0;
+  transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.c-closebutton:hover, .c-closebutton:focus {
+  color: hsl(var(--clr-space-300));
 }
 
 .c-tabs {
   cursor: pointer;
-  background-color: transparent;
   border: none;
+  background-color: transparent;
+  border-bottom: 3px solid transparent;
   color: hsl(var(--clr-space-200));
-  padding: 0;
+  padding: 1em 0;
   margin: 1em;
+  transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.c-tabs:hover, .c-tabs:focus {
+  color: hsl(var(--clr-space-100));
+  border-bottom: 3px solid hsl(var(--clr-space-100));
+}
+
+.c-sidebar {
+  background-color: hsl(var(--clr-space-300));
+  position: fixed;
+  inset: 0 0 0 30%;
+  transform: translateX(100%);
+  transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.c-sidebar__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.c-sidebar__item {
+  border-right: 3px solid transparent;
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+.c-sidebar__item:hover, .c-sidebar__item:focus {
+  border-right: 3px solid hsl(var(--clr-space-100));
+}
+.c-sidebar__link {
+  color: hsl(var(--clr-space-100));
+  text-decoration: none;
+}
+
+.visible {
+  transform: translateX(0);
 }
 
 .l-container {
@@ -244,7 +301,7 @@ p {
   .c-nav {
     display: block;
   }
-  .c-button {
+  .c-openbutton {
     display: none;
   }
 }
