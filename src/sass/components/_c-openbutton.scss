@@ -1,12 +1,18 @@
 @use "../abstract" as *;
 
-.c-button {
+.c-openbutton {
+  cursor: pointer;
   background-color: transparent;
   border: none;
   color: hsl(var(--clr-space-100));
-  font-size: 2em;
+  font-size: 2rem;
   justify-self: end;
   align-self: center;
   padding: 0;
-  margin: 2rem 0;
+  transition: $transition-global;
+
+  &:hover,
+  &:focus {
+    color: hsl(var(--clr-space-300));
+  }
 }

@@ -1,0 +1,18 @@
+@use "../abstract" as *;
+
+.c-closebutton {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: hsl(var(--clr-space-100));
+  font-size: 4rem;
+  justify-self: center;
+  align-self: center;
+  padding: 0;
+  transition: $transition-global;
+
+  &:hover,
+  &:focus {
+    color: hsl(var(--clr-space-300));
+  }
+}

@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="dist/css/index.css">
+  <script src="/src/js/sidebar.js" defer></script>
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 
@@ -29,8 +30,23 @@
                 class="number-title">03</span>Technology</a></li>
         </menu>
       </nav>
-      <button class="c-button">&#9776</button>
+      <button class="c-openbutton js-openbutton">&#9776</button>
     </header>
+    <nav class="c-sidebar js-sidebar">
+      <menu class="c-sidebar__menu">
+        <button class="c-closebutton js-closebutton">&times;</button>
+        <li class="c-sidebar__item"><a href="#" class="c-sidebar__link ls-2 uppercase"><span
+              class="number-title">00</span>Home</a>
+        </li>
+        <li class="c-sidebar__item"><a href="#" class="c-sidebar__link ls-2 uppercase"><span
+              class="number-title">01</span>Destination</a></li>
+        <li class="c-sidebar__item"><a href="#" class="c-sidebar__link ls-2 uppercase"><span
+              class="number-title">02</span>Crew</a>
+        </li>
+        <li class="c-sidebar__item"><a href="#" class="c-sidebar__link ls-2 uppercase"><span
+              class="number-title">03</span>Technology</a></li>
+      </menu>
+    </nav>
     <main class="l-main">
       <section class="l-main__intro">
         <h1 class="l-main__title text-medium fs-400 ls-4 uppercase">So, you want to travel to
