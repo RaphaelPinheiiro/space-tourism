@@ -1,0 +1,18 @@
+@use "../abstract" as *;
+
+.c-dots {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid hsl(var(--clr-space-100));
+  border-radius: 50%;
+  color: hsl(var(--clr-space-100));
+  padding: 0 1em;
+  aspect-ratio: 1;
+  transition: $transition-global;
+
+  &:hover,
+  &:focus {
+    background-color: hsl(var(--clr-space-100));
+    color: hsl(var(--clr-space-300));
+  }
+}

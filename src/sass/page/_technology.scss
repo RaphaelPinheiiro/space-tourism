@@ -1,0 +1,19 @@
+@use "../tools" as *;
+
+.technology {
+  background-image: url("/src/assets/technology/background-technology-mobile.jpg");
+  background-position: bottom;
+  background-size: cover;
+}
+
+@include breakPoints("medium") {
+  .technology {
+    background-image: url("/src/assets/technology/background-technology-tablet.jpg");
+  }
+}
+
+@include breakPoints("large") {
+  .technology {
+    background-image: url("/src/assets/technology/background-technology-desktop.jpg");
+  }
+}

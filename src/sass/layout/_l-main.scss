@@ -7,7 +7,8 @@
     align-self: center;
   }
 
-  &__destination {
+  &__destination,
+  &__technology {
     display: grid;
     place-items: center;
     gap: 2rem;
@@ -25,6 +26,15 @@
     padding-top: 1em;
     gap: 2em;
   }
+
+  &__dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 // Media queries main
@@ -33,8 +43,17 @@
   .l-main {
     text-align: left;
 
-    &__destination {
+    &__destination,
+    &__info {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__technology {
+      grid-template-columns: auto 1fr 1fr;
+    }
+
+    &__destination,
+    &__technology {
       place-items: center left;
     }
 
@@ -46,15 +65,19 @@
       order: 1;
     }
 
-    &__moon {
+    &__moon,
+    &__vehicle {
       order: 2;
     }
 
-    &__info {
-      grid-template-columns: repeat(2, 1fr);
+    &__photograph {
+      order: 3;
+    }
+
+    &__dots {
+      flex-direction: column;
     }
   }
-
   .c-tabs {
     margin: 0 2em 0 0;
   }
