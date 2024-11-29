@@ -3,11 +3,11 @@
 .c-tabs {
   cursor: pointer;
   border: none;
-  background-color: transparent;
   border-bottom: 3px solid transparent;
+  background-color: transparent;
   color: hsl(var(--clr-space-200));
   padding: 1em 0;
-  margin: 1em;
+  margin: 0 1em;
   transition: $transition-global;
 
   &:hover,

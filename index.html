@@ -10,55 +10,73 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="dist/css/index.css">
-  <script src="/src/js/sidebar.js" defer></script>
+  <script src="/src/js/navigation.js" defer></script>
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 
 <body class="home">
   <div class="l-container wrapper">
     <header class="l-header">
-      <img class="l-header__logo" src="/src/assets/shared/logo.svg" alt="Space logo">
+      <img class="l-header__logo" src="src/assets/shared/logo.svg" alt="Space logo">
       <nav class="c-nav">
         <menu class="c-nav__menu">
-          <li class="c-nav__item"><a href="index.html" class="c-nav__link ls-2 uppercase"><span
-                class="number-title">00</span>Home</a></li>
-          <li class="c-nav__item"><a href="destination-moon.html" class="c-nav__link ls-2 uppercase"><span
-                class="number-title">01</span>Destination</a></li>
-          <li class="c-nav__item"><a href="#" class="c-nav__link ls-2 uppercase"><span
-                class="number-title">02</span>Crew</a></li>
-          <li class="c-nav__item"><a href="#" class="c-nav__link ls-2 uppercase"><span
-                class="number-title">03</span>Technology</a></li>
+          <li class="c-nav__item">
+            <a href="index.html" class="c-nav__link ls-2 uppercase"><span aria-hidden="true"
+                class="number-title">00</span>Home</a>
+          </li>
+          <li class="c-nav__item">
+            <a href="destination.html" class="c-nav__link ls-2 uppercase"><span aria-hidden="true"
+                class="number-title">01</span>Destination</a>
+          </li>
+          <li class="c-nav__item">
+            <a href="crew.html" class="c-nav__link ls-2 uppercase"><span aria-hidden="true"
+                class="number-title">02</span>Crew</a>
+          </li>
+          <li class="c-nav__item">
+            <a href="technology.html" class="c-nav__link ls-2 uppercase"><span aria-hidden="true"
+                class="number-title">03</span>Technology</a>
+          </li>
         </menu>
       </nav>
-      <button class="c-openbutton js-openbutton">&#9776</button>
+      <button aria-expanded="false" class="c-open js-open">&#9776</button>
     </header>
     <nav class="c-sidebar js-sidebar">
       <menu class="c-sidebar__menu">
-        <button class="c-closebutton js-closebutton">&times;</button>
-        <li class="c-sidebar__item"><a href="#" class="c-sidebar__link ls-2 uppercase"><span
+        <button class="c-close js-close">&times;</button>
+        <li class="c-sidebar__item">
+          <a href="index.html" class="c-sidebar__link ls-2 uppercase"><span aria-hidden="true"
               class="number-title">00</span>Home</a>
         </li>
-        <li class="c-sidebar__item"><a href="#" class="c-sidebar__link ls-2 uppercase"><span
-              class="number-title">01</span>Destination</a></li>
-        <li class="c-sidebar__item"><a href="#" class="c-sidebar__link ls-2 uppercase"><span
+        <li class="c-sidebar__item">
+          <a href="destination.html" class="c-sidebar__link ls-2 uppercase"><span aria-hidden="true"
+              class="number-title">01</span>Destination</a>
+        </li>
+        <li class="c-sidebar__item">
+          <a href="crew.html" class="c-sidebar__link ls-2 uppercase"><span aria-hidden="true"
               class="number-title">02</span>Crew</a>
         </li>
-        <li class="c-sidebar__item"><a href="#" class="c-sidebar__link ls-2 uppercase"><span
-              class="number-title">03</span>Technology</a></li>
+        <li class="c-sidebar__item">
+          <a href="technology.html" class="c-sidebar__link ls-2 uppercase"><span aria-hidden="true"
+              class="number-title">03</span>Technology</a>
+        </li>
       </menu>
     </nav>
-    <main class="l-main">
-      <section class="l-main__intro">
-        <h1 class="l-main__title text-medium fs-400 ls-4 uppercase">So, you want to travel to
-          <span class="d-block margin text-light fs-800 ff-serif ls-0">Space</span>
+    <main class="l-main grid">
+      <section class="l-main__intro text-medium">
+        <h1 class="l-main__title ls-4 fs-400 uppercase">So, you want to travel to <span
+            class="d-block margin ls-0 ff-serif fs-800 text-light">Space</span>
         </h1>
-        <p class="l-main__paragraph text-medium">Let’s face it; if you want to go to space, you might as well genuinely
+        <p class="l-main__paragraph ff-sans-normal">Let’s face it; if you want to go to space, you might as well
+          genuinely
           go to
           outer space and not hover kind of on the edge of it. Well sit back, and relax
           because we’ll give you a truly out of this world experience!</p>
       </section>
+      <a class="c-explore fs-400 ff-serif uppercase" href="#">Explore</a>
     </main>
-    <footer class="l-footer uppercase">&copy;Bloom</footer>
+    <footer class="l-footer">
+      <p class="l-footer__paragraph ls-2 uppercase">&copy;Bloom</p>
+    </footer>
   </div>
 </body>
 

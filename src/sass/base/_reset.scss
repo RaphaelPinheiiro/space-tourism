@@ -1,33 +1,44 @@
+// Box-sizing
+
 *,
 ::after,
 ::before {
   box-sizing: border-box;
 }
 
+// Body
+
+body {
+  margin: 0;
+}
+
+// Font
+
 h1,
 h2,
 h3,
 h4,
-p,
-body,
-figure,
-picture {
+p {
   margin: 0;
 }
 
-menu,
-ul {
+// Container
+
+menu {
   margin: 0;
   padding: 0;
 }
 
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
+// Button
 
 button {
   font-family: inherit;
   font-size: inherit;
+  padding: 0;
+}
+
+// Image
+
+img {
+  max-width: 100%;
 }

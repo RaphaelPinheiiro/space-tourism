@@ -15,7 +15,14 @@
   }
 
   &__link {
-    text-decoration: none;
+    border-bottom: 3px solid transparent;
     color: hsl(var(--clr-space-100));
+    text-decoration: none;
+    transition: $transition-global;
+
+    &:hover,
+    &:focus {
+      border-bottom: 3px solid hsl(var(--clr-space-100));
+    }
   }
 }

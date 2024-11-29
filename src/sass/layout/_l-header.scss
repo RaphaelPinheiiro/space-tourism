@@ -2,19 +2,21 @@
 
 .l-header {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 2fr;
 
   &__logo {
     margin: 2rem 0;
   }
 }
 
-@include breakPoints("large") {
+// Media queries header
+
+@include breakPoints("medium") {
   .c-nav {
     display: block;
   }
 
-  .c-openbutton {
+  .c-open {
     display: none;
   }
 }

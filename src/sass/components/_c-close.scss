@@ -1,0 +1,18 @@
+@use "../abstract" as *;
+
+.c-close {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: hsl(var(--clr-space-100));
+  font-size: 2.3rem;
+  justify-self: center;
+  align-self: start;
+  margin: 0 2rem;
+  transition: $transition-global;
+
+  &:hover,
+  &:focus {
+    color: hsl(var(--clr-space-100) / 0.5);
+  }
+}

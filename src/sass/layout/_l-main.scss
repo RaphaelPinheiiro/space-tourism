@@ -1,49 +1,65 @@
 @use "../tools" as *;
 
 .l-main {
-  display: grid;
-  align-items: center;
+  text-align: center;
 
   &__intro {
-    text-align: center;
+    align-self: center;
   }
 
   &__destination {
     display: grid;
-    align-items: center;
-    text-align: center;
+    place-items: center;
     gap: 2rem;
     height: 100%;
   }
 
   &__picture {
     justify-self: center;
-    max-width: 60%;
+    max-width: 50%;
   }
 
   &__info {
     display: grid;
+    border-top: 1px solid hsl(var(--clr-space-100) / 0.5);
+    padding-top: 1em;
     gap: 2em;
-    border-top: 1px solid hsl(var(--clr-space-100) / 0.25);
-    padding-top: 1.5rem;
   }
 }
 
+// Media queries main
+
 @include breakPoints("medium") {
-  .l-main__destination {
-    grid-template-columns: repeat(2, 1fr);
+  .l-main {
     text-align: left;
+
+    &__destination {
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center left;
+    }
+
+    &__tabs {
+      align-self: end;
+    }
+
+    &__picture {
+      order: 1;
+    }
+
+    &__moon {
+      order: 2;
+    }
+
+    &__info {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
-  .l-main__info {
+  .c-tabs {
+    margin: 0 2em 0 0;
+  }
+
+  .grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .l-main__tabs {
-    order: -1;
-  }
-
-  .l-main__title {
-    order: -1;
   }
 }
