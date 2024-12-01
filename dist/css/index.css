@@ -29,6 +29,7 @@ button {
 
 img {
   max-width: 100%;
+  display: block;
 }
 
 body {
@@ -341,7 +342,7 @@ p {
 
 .l-container {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr;
   row-gap: 2rem;
   min-height: 100vh;
 }
@@ -368,13 +369,13 @@ p {
 .l-main__intro {
   align-self: center;
 }
-.l-main__destination, .l-main__technology {
+.l-main__destination, .l-main__technology, .l-main__crew {
   display: grid;
   place-items: center;
   gap: 2rem;
   height: 100%;
 }
-.l-main__picture {
+.l-main__asteroids {
   justify-self: center;
   max-width: 50%;
 }
@@ -384,7 +385,7 @@ p {
   padding-top: 1em;
   gap: 2em;
 }
-.l-main__dots {
+.l-main__dots, .l-main__smalldots {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -392,12 +393,17 @@ p {
   width: 100%;
   height: 100%;
 }
+.l-main__people {
+  align-self: end;
+  max-width: 50%;
+  border-bottom: 3px solid hsl(var(--clr-space-100)/0.15);
+}
 
 @media (min-width: 56.25em) {
   .l-main {
     text-align: left;
   }
-  .l-main__destination, .l-main__info {
+  .l-main__destination, .l-main__crew, .l-main__info {
     grid-template-columns: repeat(2, 1fr);
   }
   .l-main__technology {
@@ -405,21 +411,27 @@ p {
   }
   .l-main__destination, .l-main__technology {
     place-items: center left;
+    grid-template-rows: auto 1fr;
   }
   .l-main__tabs {
     align-self: end;
   }
-  .l-main__picture {
+  .l-main__asteroids {
     order: 1;
   }
   .l-main__moon, .l-main__vehicle {
     order: 2;
   }
-  .l-main__photograph {
+  .l-main__nave {
     order: 3;
   }
   .l-main__dots {
     flex-direction: column;
+  }
+  .l-main__smalldots {
+    order: 1;
+    margin-bottom: 2rem;
+    justify-content: space-between;
   }
   .c-tabs {
     margin: 0 2em 0 0;
@@ -479,6 +491,22 @@ p {
 @media (min-width: 75em) {
   .technology {
     background-image: url("/src/assets/technology/background-technology-desktop.jpg");
+  }
+}
+.crew {
+  background-image: url("/src/assets/crew/background-crew-mobile.jpg");
+  background-position: top;
+  background-size: cover;
+}
+
+@media (min-width: 56.25em) {
+  .crew {
+    background-image: url("/src/assets/crew/background-crew-tablet.jpg");
+  }
+}
+@media (min-width: 75em) {
+  .crew {
+    background-image: url("/src/assets/crew/background-crew-desktop.jpg");
   }
 }
 

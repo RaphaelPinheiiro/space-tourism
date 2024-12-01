@@ -11,6 +11,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="dist/css/index.css">
   <script src="/src/js/navigation.js" defer></script>
+  <script src="src/js/tabs.js" defer></script>
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 
@@ -66,13 +67,35 @@
         <h1 class="l-main__title columns fs-400 ls-4 uppercase">
           <span aria-hidden="true" class="number-title">03</span>Space launch 101
         </h1>
-        <img class="l-main__photograph" src="src/assets/technology/image-launch-vehicle-portrait.jpg" alt="The vehicle">
-        <div class="l-main__dots">
-          <button class="c-dots fs-400 ff-serif">1</button>
-          <button class="c-dots fs-400 ff-serif">2</button>
-          <button class="c-dots fs-400 ff-serif">3</button>
+
+        <!--Vehicle-->
+        <picture class="l-main__nave" id="vehicle-image">
+          <img class="l-main__photograph" src="src/assets/technology/image-launch-vehicle-portrait.jpg"
+            alt="The vehicle">
+        </picture>
+
+        <!--SpacePort-->
+        <picture hidden class="l-main__nave" id="spaceport-image">
+          <img class="l-main__photograph" src="src/assets/technology/image-spaceport-portrait.jpg" alt="The Space port">
+        </picture>
+
+        <!--SpaceCapsule-->
+        <picture hidden class="l-main__nave" id="spacecapsule-image">
+          <img class="l-main__photograph" src="src/assets/technology/image-space-capsule-portrait.jpg"
+            alt="The space capsule">
+        </picture>
+
+        <div class="l-main__dots" role="tablist" aria-label="space launch">
+          <button class="c-dots fs-400 ff-serif" aria-selected="true" role="tab" tabindex="0" aria-controls="vehicle"
+            data-image="vehicle-image">1</button>
+          <button class="c-dots fs-400 ff-serif" aria-selected="false" role="tab" tabindex="-1"
+            aria-controls="space-port" data-image="spaceport-image">2</button>
+          <button class="c-dots fs-400 ff-serif" aria-selected="false" role="tab" tabindex="-1"
+            aria-controls="space-capsule" data-image="spacecapsule-image">3</button>
         </div>
-        <article class="l-main__vehicle text-medium">
+
+        <!--Vehicle-->
+        <article class="l-main__vehicle text-medium" id="vehicle" tabindex="0" role="tabpanel">
           <h2 class=" l-main__subtitle fs-600 ff-serif text-light uppercase"><span
               class="d-block fs-400 margin text-medium">The
               terminology...</span>
@@ -83,11 +106,34 @@
             WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall,
             it's quite an awe-inspiring sight on the launch pad!</p>
         </article>
+
+        <!--Spaceport-->
+        <article hidden class="l-main__spaceport text-medium" id="space-port" tabindex="0" role="tabpanel">
+          <h2 class=" l-main__subtitle fs-600 ff-serif text-light uppercase"><span
+              class="d-block fs-400 margin text-medium">The
+              terminology...</span>
+            Spaceport</h2>
+          <p class="l-main__paragraph margin ff-sans-normal">A spaceport or cosmodrome is a site for launching (or
+            receiving) spacecraft,
+            by analogy to the seaport for ships or airport for aircraft. Based in the
+            famous Cape Canaveral, our spaceport is ideally situated to take advantage
+            of the Earth’s rotation for launch.</p>
+        </article>
+
+        <!--Space capsule-->
+        <article hidden class="l-main__spacecapsule text-medium" id="space-capsule" tabindex="0" role="tabpanel">
+          <h2 class=" l-main__subtitle fs-600 ff-serif text-light uppercase"><span
+              class="d-block fs-400 margin text-medium">The
+              terminology...</span>
+            Space capsule</h2>
+          <p class="l-main__paragraph margin ff-sans-normal"> A space capsule is an often-crewed spacecraft that uses a
+            blunt-body reentry
+            capsule to reenter the Earth's atmosphere without wings. Our capsule is where
+            you'll spend your time during the flight. It includes a space gym, cinema,
+            and plenty of other activities to keep you entertained.</p>
+        </article>
       </section>
     </main>
-    <footer class="l-footer">
-      <p class="l-footer__paragraph ls-2 uppercase">&copy;Bloom</p>
-    </footer>
   </div>
 </body>
 

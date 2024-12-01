@@ -1,0 +1,19 @@
+@use "../tools" as *;
+
+.crew {
+  background-image: url("/src/assets/crew/background-crew-mobile.jpg");
+  background-position: top;
+  background-size: cover;
+}
+
+@include breakPoints("medium") {
+  .crew {
+    background-image: url("/src/assets/crew/background-crew-tablet.jpg");
+  }
+}
+
+@include breakPoints("large") {
+  .crew {
+    background-image: url("/src/assets/crew/background-crew-desktop.jpg");
+  }
+}

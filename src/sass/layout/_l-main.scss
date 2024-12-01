@@ -8,14 +8,15 @@
   }
 
   &__destination,
-  &__technology {
+  &__technology,
+  &__crew {
     display: grid;
     place-items: center;
     gap: 2rem;
     height: 100%;
   }
 
-  &__picture {
+  &__asteroids {
     justify-self: center;
     max-width: 50%;
   }
@@ -27,13 +28,20 @@
     gap: 2em;
   }
 
-  &__dots {
+  &__dots,
+  &__smalldots {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 100%;
+  }
+
+  &__people {
+    align-self: end;
+    max-width: 50%;
+    border-bottom: 3px solid hsl(var(--clr-space-100) / 0.15);
   }
 }
 
@@ -44,6 +52,7 @@
     text-align: left;
 
     &__destination,
+    &__crew,
     &__info {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -55,13 +64,14 @@
     &__destination,
     &__technology {
       place-items: center left;
+      grid-template-rows: auto 1fr;
     }
 
     &__tabs {
       align-self: end;
     }
 
-    &__picture {
+    &__asteroids {
       order: 1;
     }
 
@@ -70,12 +80,18 @@
       order: 2;
     }
 
-    &__photograph {
+    &__nave {
       order: 3;
     }
 
     &__dots {
       flex-direction: column;
+    }
+
+    &__smalldots {
+      order: 1;
+      margin-bottom: 2rem;
+      justify-content: space-between;
     }
   }
   .c-tabs {
