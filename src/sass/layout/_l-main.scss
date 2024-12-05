@@ -40,7 +40,8 @@
 
   &__people {
     align-self: end;
-    max-width: 50%;
+    justify-self: center;
+    max-width: 60%;
     border-bottom: 3px solid hsl(var(--clr-space-100) / 0.15);
   }
 }
@@ -62,9 +63,9 @@
     }
 
     &__destination,
-    &__technology {
+    &__technology,
+    &__crew {
       place-items: center left;
-      grid-template-rows: auto 1fr;
     }
 
     &__tabs {
@@ -89,9 +90,17 @@
     }
 
     &__smalldots {
-      order: 1;
       margin-bottom: 2rem;
       justify-content: space-between;
+    }
+
+    &__smalldots {
+      grid-column: 1 / 2;
+    }
+
+    &__people {
+      grid-column: 2 / 3;
+      grid-row: 2 / 4;
     }
   }
   .c-tabs {

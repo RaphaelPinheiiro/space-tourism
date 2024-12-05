@@ -11,7 +11,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="dist/css/index.css">
   <script src="/src/js/navigation.js" defer></script>
-  <!-- <script src="/src/js/tabs.js" defer></script> -->
+  <script src="/src/js/tabs.js" defer></script>
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 
@@ -67,7 +67,9 @@
         <h1 class="l-main__title fs-400 ls-4 uppercase columns">
           <span aria-hidden="true" class="number-title">02</span>Meet your crew
         </h1>
-        <article class="l-main__commander text-medium">
+
+        <!--Commander-->
+        <article class="l-main__commander text-medium" id="commander" tabindex="0" role="tabpanel">
           <h2 class=" l-main__subtitle fs-600 ff-serif text-light uppercase"><span
               class="d-block fs-400 margin text-medium">Commander</span>
             Douglas Hurley</h2>
@@ -77,14 +79,70 @@
             WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall,
             it's quite an awe-inspiring sight on the launch pad!</p>
         </article>
-        <div class="l-main__smalldots">
-          <button class="c-dots fs-400 ff-serif"></button>
-          <button class="c-dots fs-400 ff-serif"></button>
-          <button class="c-dots fs-400 ff-serif"></button>
-          <button class="c-dots fs-400 ff-serif"></button>
+
+        <!--Engineer-->
+        <article hidden class="l-main__enginner text-medium" id="enginner" tabindex="0" role="tabpanel">
+          <h2 class=" l-main__subtitle fs-600 ff-serif text-light uppercase"><span
+              class="d-block fs-400 margin text-medium">Flight Engineer</span>
+            Anousheh Ansari</h2>
+          <p class="l-main__paragraph margin ff-sans-normal">Anousheh Ansari is an Iranian American engineer and
+            co-founder of Prodea Systems.
+            Ansari was the fourth self-funded space tourist, the first self-funded woman to
+            fly to the ISS, and the first Iranian in space. </p>
+        </article>
+
+        <!--Pilot-->
+        <article hidden class="l-main__pilot text-medium" id="pilot" tabindex="0" role="tabpanel">
+          <h2 class=" l-main__subtitle fs-600 ff-serif text-light uppercase"><span
+              class="d-block fs-400 margin text-medium">Pilot</span>
+            Victor Glover</h2>
+          <p class="l-main__paragraph margin ff-sans-normal">Pilot on the first operational flight of the SpaceX Crew
+            Dragon to the
+            International Space Station. Glover is a commander in the U.S. Navy where
+            he pilots an F/A-18.He was a crew member of Expedition 64, and served as a
+            station systems flight engineer.</p>
+        </article>
+
+        <!--Specialist-->
+        <article hidden class="l-main__specialist text-medium" id="specialist" tabindex="0" role="tabpanel">
+          <h2 class=" l-main__subtitle fs-600 ff-serif text-light uppercase"><span
+              class="d-block fs-400 margin text-medium">Mission Specialist</span>
+            Mark Shuttleworth</h2>
+          <p class="l-main__paragraph margin ff-sans-normal"> Mark Richard Shuttleworth is the founder and CEO of
+            Canonical, the company behind
+            the Linux-based Ubuntu operating system. Shuttleworth became the first South
+            African to travel to space as a space tourist.</p>
+        </article>
+
+        <div class="l-main__smalldots" role="tablist" aria-label="crew list">
+          <button class="c-dots fs-400 ff-serif" aria-selected="true" role="tab" tabindex="0" aria-controls="commander"
+            data-image="commander-image"></button>
+          <button class="c-dots fs-400 ff-serif" aria-selected="false" role="tab" tabindex="-1" aria-controls="enginner"
+            data-image="enginner-image"></button>
+          <button class="c-dots fs-400 ff-serif" aria-selected="false" role="tab" tabindex="-1" aria-controls="pilot"
+            data-image="pilot-image"></button>
+          <button class="c-dots fs-400 ff-serif" aria-selected="false" role="tab" tabindex="-1"
+            aria-controls="specialist" data-image="specialist-image"></button>
         </div>
-        <picture class="l-main__people">
+
+        <!--Commander-->
+        <picture class="l-main__people" id="commander-image">
           <img class="l-main__photograph" src="src/assets/crew/image-douglas-hurley.png" alt="Douglas Hurley">
+        </picture>
+
+        <!--Enginner-->
+        <picture hidden class="l-main__people" id="enginner-image">
+          <img class="l-main__photograph" src="src/assets/crew/image-anousheh-ansari.webp" alt="Anousheh Ansari">
+        </picture>
+
+        <!--Pilot-->
+        <picture hidden class="l-main__people" id="pilot-image">
+          <img class="l-main__photograph" src="src/assets/crew/image-victor-glover.png" alt="Victor Glover">
+        </picture>
+
+        <!--Specialist-->
+        <picture hidden class="l-main__people" id="specialist-image">
+          <img class="l-main__photograph" src="src/assets/crew//image-mark-shuttleworth.png" alt="Mark Shuttleworth">
         </picture>
       </section>
     </main>

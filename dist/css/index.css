@@ -395,7 +395,8 @@ p {
 }
 .l-main__people {
   align-self: end;
-  max-width: 50%;
+  justify-self: center;
+  max-width: 60%;
   border-bottom: 3px solid hsl(var(--clr-space-100)/0.15);
 }
 
@@ -409,9 +410,8 @@ p {
   .l-main__technology {
     grid-template-columns: auto 1fr 1fr;
   }
-  .l-main__destination, .l-main__technology {
+  .l-main__destination, .l-main__technology, .l-main__crew {
     place-items: center left;
-    grid-template-rows: auto 1fr;
   }
   .l-main__tabs {
     align-self: end;
@@ -429,9 +429,15 @@ p {
     flex-direction: column;
   }
   .l-main__smalldots {
-    order: 1;
     margin-bottom: 2rem;
     justify-content: space-between;
+  }
+  .l-main__smalldots {
+    grid-column: 1/2;
+  }
+  .l-main__people {
+    grid-column: 2/3;
+    grid-row: 2/4;
   }
   .c-tabs {
     margin: 0 2em 0 0;
